@@ -163,7 +163,7 @@ class GifFrameExtractor
                     imagecopy($sprite, $prevImg, 0, 0, 0, 0, $this->gifMaxWidth, $this->gifMaxHeight);
                 }
                 
-                imagecopyresampled($sprite, $img, $this->frameSources[$i]["offset_left"], $this->frameSources[$i]["offset_top"], 0, 0, $this->gifMaxWidth, $this->gifMaxHeight, $this->gifMaxWidth, $this->gifMaxHeight);
+                imagecopyresampled($sprite, $img, $this->frameSources[$i]["offset_left"], $this->frameSources[$i]["offset_top"], 0, 0, $this->frameSources[$i]["width"], $this->frameSources[$i]["height"], $this->frameSources[$i]["width"], $this->frameSources[$i]["height"]);
                 $img = $sprite;
             }
             
